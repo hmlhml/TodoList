@@ -3,7 +3,7 @@ var todocount=document.querySelector("#todocount");
 var donecount=document.querySelector("#donecount");
 var todolist=document.getElementById("todolist");
 var donelist=document.getElementById("donelist");
-
+var clear=document.getElementById("clear");
 
 title.onkeydown=function(e){
 	if(e.keyCode==13){
@@ -75,4 +75,8 @@ function reload(){
     todolist.innerHTML=nowStr;
     donelist.innerHTML=comStr;
 
+}
+clear.onclick=function(){
+	localStorage.clear();
+	reload();
 }
